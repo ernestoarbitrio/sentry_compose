@@ -1,9 +1,5 @@
 Sentry docker-compose
 --------
-
-This is the docker-compose file that we use at [artbio](http://artbio.fr) to keep
-track of our galaxy servers https://lbcd41.snv.jussieu.fr and https://mississippi.snv.jussieu.fr
-
 Images
 -------
 
@@ -20,7 +16,7 @@ We excluded the secret_env_vars file from this repository.
 You can create your own, its content must contain the secret key that is shared by all sentry containers.
 To generate the secret key, run
 ```
-docker run --rm sentry generate-secret-key`
+ docker run --rm sentry config generate-secret-key
 ```
 You can write this secret key into the secret_env_vars file,
 that will be read when running docker-compose up:
